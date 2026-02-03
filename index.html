@@ -159,12 +159,13 @@
         }
         .flywheel-step strong { color: var(--primary); display: block; font-size: 1.1rem; }
 
-        /* --- ORIGINAL PRODUCT SHOWCASE (UPDATED) --- */
+        /* --- ORIGINAL PRODUCT SHOWCASE (MOVED UP) --- */
         .product-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr; 
             gap: 20px;
-            margin-top: 10px;
+            /* Negative margin to pull images closer to the text */
+            margin-top: -20px; 
             height: 380px; 
             align-items: start;
         }
@@ -181,7 +182,6 @@
             display: flex;
             justify-content: center;
             align-items: center; /* Center image in box */
-            /* Removed border/shadow/radius to let image be original */
         }
         
         .mockup-img {
@@ -189,10 +189,10 @@
             max-height: 100%;
             width: auto;
             height: auto;
-            object-fit: contain; /* CRITICAL: Shows full image, no crop */
+            object-fit: contain; /* Shows full image, no crop */
             display: block;
-            border-radius: 8px; /* Slight radius on the image itself looks nice */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow on image */
+            border-radius: 8px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
         }
         
         .step-title {
