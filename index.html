@@ -11,6 +11,7 @@
             --text: #202124;
             --bg: #f8f9fa;
             --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --table-border: #e0e0e0;
         }
 
         body {
@@ -163,6 +164,13 @@
         .team-card { background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .role-title { color: var(--primary); font-weight: 700; font-size: 1.2rem; margin-bottom: 5px; display: block; }
         .role-desc { font-size: 0.95rem; color: #555; line-height: 1.4; }
+
+        /* --- FINANCIAL TABLE --- */
+        .fin-table { width: 100%; border-collapse: collapse; font-family: 'Roboto', sans-serif; }
+        .fin-table th { text-align: left; padding: 10px; border-bottom: 2px solid var(--primary); color: var(--text); font-size: 1.1rem; }
+        .fin-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 1rem; color: #555; }
+        .fin-table tr:last-child td { font-weight: 700; color: var(--text); border-bottom: none; }
+        .fin-col-num { text-align: right; }
 
         /* --- CONTROLS --- */
         .controls {
@@ -544,6 +552,63 @@
 
     <div class="slide">
         <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
+        <h2>Financial Projections (3-Year Outlook)</h2>
+        <div class="two-col">
+            <div>
+                <h3>Key Growth Assumptions</h3>
+                <ul>
+                    <li><strong>Year 1 (Build):</strong> Focus on Product/Market Fit. Revenue is negligible. Main cost is Engineering.</li>
+                    <li><strong>Year 2 (Growth):</strong> Mobile App Launch + Podcast viral effect kicks in. B2B Revenue starts.</li>
+                    <li><strong>Year 3 (Scale):</strong> B2C Subscription + Ads/Affiliate reach scale. Operating Break-even by Q4.</li>
+                </ul>
+                <div class="highlight-box" style="margin-top:20px;">
+                    <strong>Unit Economics (Est.)</strong>
+                    <div style="display:flex; justify-content:space-between; margin-top:10px;">
+                        <span>CAC (Organic): <strong style="color:var(--primary)">€2.50</strong></span>
+                        <span>LTV (2yr): <strong style="color:var(--primary)">€45.00</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <table class="fin-table">
+                    <tr>
+                        <th>Metric</th>
+                        <th class="fin-col-num">Year 1 (2026)</th>
+                        <th class="fin-col-num">Year 2 (2027)</th>
+                        <th class="fin-col-num">Year 3 (2028)</th>
+                    </tr>
+                    <tr>
+                        <td>Active Users (MAU)</td>
+                        <td class="fin-col-num">15,000</td>
+                        <td class="fin-col-num">85,000</td>
+                        <td class="fin-col-num">350,000</td>
+                    </tr>
+                    <tr>
+                        <td>Revenue (ARR)</td>
+                        <td class="fin-col-num">€25,000</td>
+                        <td class="fin-col-num">€450,000</td>
+                        <td class="fin-col-num">€1.8M</td>
+                    </tr>
+                    <tr>
+                        <td>Burn Rate (Monthly)</td>
+                        <td class="fin-col-num">€25k</td>
+                        <td class="fin-col-num">€35k</td>
+                        <td class="fin-col-num">€60k</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EBITDA</strong></td>
+                        <td class="fin-col-num" style="color:red">-(€280k)</td>
+                        <td class="fin-col-num" style="color:red">-(€150k)</td>
+                        <td class="fin-col-num" style="color:var(--primary)">+€450k</td>
+                    </tr>
+                </table>
+                <p style="font-size:0.8rem; margin-top:10px; color:#999;">*Projections based on 4% conversion to Paid and organic growth via Podcast/BookTok.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
         <h2>The Ask: €500,000 (Seed)</h2>
         <p>Objective: Bridge from MVP to Mobile Network (18 Months Runway).</p>
         
@@ -586,7 +651,7 @@
     </div>
 
     <div class="controls">
-        <span class="page-num" id="pageNum">1 / 17</span>
+        <span class="page-num" id="pageNum">1 / 18</span>
         <button class="nav-btn" onclick="prevSlide()">❮</button>
         <button class="nav-btn" onclick="nextSlide()">❯</button>
     </div>
