@@ -30,7 +30,6 @@
         .deck-container {
             width: 100%;
             max-width: 1200px;
-            /* Fixed aspect ratio 16:9 */
             aspect-ratio: 16/9;
             background: white;
             border-radius: 24px;
@@ -45,7 +44,6 @@
             display: none;
             flex-direction: column;
             height: 100%;
-            /* FIX 1: Reduced vertical padding to 50px */
             padding: 50px 70px; 
             box-sizing: border-box;
             animation: fadeIn 0.4s ease;
@@ -61,13 +59,11 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- TYPOGRAPHY (TIGHTENED) --- */
-        /* FIX 2: Reduced Heading sizes and margins */
+        /* --- TYPOGRAPHY --- */
         h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: -1px; line-height: 1.2; }
         h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 1rem; line-height: 1.2; }
         h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #5f6368; margin-top: 0; }
         
-        /* FIX 3: Reduced body text to 1.15rem (approx 18px) to prevent overflow */
         p, li { 
             font-family: 'Roboto', sans-serif; 
             font-size: 1.15rem; 
@@ -116,12 +112,11 @@
 
         .two-col {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr; /* Left col slightly wider */
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 50px;
             height: 100%;
-            /* FIX 4: Ensure grid items align to top/center, not stretch */
             align-content: start; 
-            padding-bottom: 40px; /* Safe zone for controls */
+            padding-bottom: 40px;
         }
 
         .highlight-box {
@@ -129,7 +124,7 @@
             padding: 25px;
             border-radius: 16px;
             border-left: 5px solid var(--primary);
-            height: fit-content; /* Don't stretch */
+            height: fit-content;
         }
 
         /* --- CONTROLS --- */
@@ -140,7 +135,7 @@
             display: flex;
             gap: 15px;
             align-items: center;
-            background: rgba(255,255,255,0.8); /* Slight background to prevent text clash */
+            background: rgba(255,255,255,0.8);
             padding: 5px 10px;
             border-radius: 20px;
             z-index: 10;
@@ -194,7 +189,7 @@
             <div>
                 <ul>
                     <li><strong>Dead Data:</strong> We own thousands of books, but they sit on shelves as static objects. Our "intellectual profile" is locked offline.</li>
-                    <li><strong>No Contextual Home:</strong> Goodreads is for reviews, not conversation. Social media is too noisy. There is no digital space for deep discussion grounded in <em>ownership</em>.</li>
+                    <li><strong>No Contextual Home:</strong> Goodreads is for reviews, not conversation. X (Twitter) is too noisy. There is no digital space for discussion grounded in <em>ownership</em>.</li>
                     <li><strong>The Creator Disconnect:</strong> Writers have no direct way to launch books to high-intent readers based on specific taste profiles.</li>
                 </ul>
             </div>
@@ -361,21 +356,24 @@
 
     <div class="slide">
         <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
-        <h2>The Ask: €200,000 (Seed)</h2>
+        <h2>The Ask: €350,000 (Seed)</h2>
         <p>Objective: Bridge from MVP to Mobile Network (18 Months Runway).</p>
         
         <div class="two-col" style="margin-top: 20px;">
             <div class="highlight-box">
                 <h3>Use of Funds</h3>
                 <ul style="margin-bottom:0">
-                    <li><strong>50% Engineering:</strong> Senior Backend & Mobile Lead.</li>
-                    <li><strong>25% Infrastructure:</strong> Scaling Vector DBs & WebRTC.</li>
-                    <li><strong>25% Growth:</strong> Reaching first 10k users.</li>
+                    <li><strong>45% Operations & Leadership:</strong> Full-time Founder & Accountant (Grossed for RO Taxes).</li>
+                    <li><strong>35% Core Engineering:</strong> Hiring 1 Senior Backend & 1 Mobile Lead.</li>
+                    <li><strong>20% Growth & Infra:</strong> Marketing campaigns & Server costs.</li>
                 </ul>
             </div>
             <div class="center-slide">
-                <p style="font-size: 1.5rem;">We are building the <strong>LinkedIn for Intellectuals</strong>.</p>
-                <p>Join us.</p>
+                <div class="highlight-box" style="border-left:none; text-align:left; background: #e6f4ea;">
+                    <p style="margin-bottom:5px; font-weight:bold; color:var(--primary)">Financial Logic (RO 2026):</p>
+                    <p style="font-size:0.95rem; margin-bottom:5px;">€5k Net Salary requires ~€9k Gross cost (CAS/CASS/Tax).</p>
+                    <p style="font-size:0.95rem; margin-bottom:0;">This ensures 100% focus from key personnel.</p>
+                </div>
             </div>
         </div>
     </div>
