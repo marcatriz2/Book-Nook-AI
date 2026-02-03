@@ -148,6 +148,22 @@
         .stat-val { font-size: 1.8rem; font-weight: 700; color: var(--primary); display:block; }
         .stat-desc { font-size: 0.9rem; color: #5f6368; }
 
+        /* --- VISUALS --- */
+        .arch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .arch-card { background: white; border: 1px solid #ddd; padding: 15px; border-radius: 12px; text-align: center; }
+        .arch-icon { font-size: 1.8rem; margin-bottom: 5px; display: block; }
+        
+        .flywheel-step {
+             padding: 15px; border-left: 3px solid #ddd; margin-bottom: 10px;
+        }
+        .flywheel-step strong { color: var(--primary); display: block; font-size: 1.1rem; }
+
+        /* --- TEAM GRID --- */
+        .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .team-card { background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .role-title { color: var(--primary); font-weight: 700; font-size: 1.2rem; margin-bottom: 5px; display: block; }
+        .role-desc { font-size: 0.95rem; color: #555; line-height: 1.4; }
+        
         /* --- CONTROLS --- */
         .controls {
             position: absolute;
@@ -172,16 +188,6 @@
         }
         .nav-btn:hover { color: var(--primary); }
         .page-num { font-size: 0.9rem; color: #bdc1c6; font-family: 'Roboto'; font-weight: 500; }
-
-        /* --- VISUALS --- */
-        .arch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-        .arch-card { background: white; border: 1px solid #ddd; padding: 15px; border-radius: 12px; text-align: center; }
-        .arch-icon { font-size: 1.8rem; margin-bottom: 5px; display: block; }
-        
-        .flywheel-step {
-             padding: 15px; border-left: 3px solid #ddd; margin-bottom: 10px;
-        }
-        .flywheel-step strong { color: var(--primary); display: block; font-size: 1.1rem; }
 
     </style>
 </head>
@@ -234,7 +240,7 @@
             <div>
                 <p>A Format-Agnostic utility that digitizes libraries in seconds.</p>
                 <ul>
-                    <li><strong>Omni-Channel Engine:</strong> Ingests photos of messy shelves AND <strong>digital exports (Kindle/Audible)</strong> in seconds.</li>
+                    <li><strong>Omni-Channel Engine:</strong> Ingests photos of messy shelves using Gemini Vision AND imports <strong>Kindle/Audible exports</strong> in seconds.</li>
                     <li><strong>Psychological Profiling:</strong> We don't just list "Sci-Fi". We analyze the collection to tell the user: <em>"You are a Macro-Strategic Thinker."</em></li>
                     <li><strong>System Design:</strong> A proprietary, "Zen-like" UI that respects user attention.</li>
                 </ul>
@@ -486,23 +492,48 @@
 
     <div class="slide">
         <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
-        <h2>The Ask: €350,000 (Seed)</h2>
+        <h2>Core Team Structure (18 Months)</h2>
+        <p>A "Lean & Mean" unit optimized for product velocity.</p>
+        
+        <div class="team-grid">
+            <div class="team-card">
+                <span class="role-title">1. The Founder (You)</span>
+                <span class="role-desc">Focus: Product Vision, Investor Relations, Growth Strategy. <br><em>Key KPI: User Retention.</em></span>
+            </div>
+            <div class="team-card">
+                <span class="role-title">2. Senior Backend Lead</span>
+                <span class="role-desc">Focus: Supabase Architecture, Matching Algo (Vectors), Security. <br><em>Ensures scalability for 1M+ users.</em></span>
+            </div>
+            <div class="team-card">
+                <span class="role-title">3. Mobile Lead</span>
+                <span class="role-desc">Focus: React Native / Flutter. <br><em>Builds the iOS/Android apps + Web Dashboard (Cross-Platform efficiency).</em></span>
+            </div>
+            <div class="team-card">
+                <span class="role-title">4. UI/UX (Contractor)</span>
+                <span class="role-desc">Focus: Figma Prototypes & Visual Polish. <br><em>On-demand resource to ensure consumer-grade aesthetics.</em></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
+        <h2>The Ask: €500,000 (Seed)</h2>
         <p>Objective: Bridge from MVP to Mobile Network (18 Months Runway).</p>
         
         <div class="two-col" style="margin-top: 20px;">
             <div class="highlight-box">
                 <h3>Use of Funds</h3>
                 <ul style="margin-bottom:0">
-                    <li><strong>45% Operations & Leadership:</strong> Full-time Founder & Accountant (Grossed for RO Taxes).</li>
-                    <li><strong>35% Core Engineering:</strong> Hiring 1 Senior Backend & 1 Mobile Lead.</li>
-                    <li><strong>20% Growth & Infra:</strong> Marketing campaigns & Server costs.</li>
+                    <li><strong>32% Founder Operations:</strong> Full-time Focus for 18 months (€5k Net/mo salary).</li>
+                    <li><strong>40% Engineering Team:</strong> 2 Senior Engineers (Backend + Mobile) for 14-16 months.</li>
+                    <li><strong>8% Design:</strong> UI/UX Contractor (Project-based).</li>
+                    <li><strong>20% Growth & Infra:</strong> Marketing campaigns, Community Mgmt, & Server scale.</li>
                 </ul>
             </div>
             <div class="center-slide">
                 <div class="highlight-box" style="border-left:none; text-align:left; background: #e6f4ea;">
-                    <p style="margin-bottom:5px; font-weight:bold; color:var(--primary)">Financial Logic (RO 2026):</p>
-                    <p style="font-size:0.95rem; margin-bottom:5px;">€5k Net Salary requires ~€9k Gross cost (CAS/CASS/Tax).</p>
-                    <p style="font-size:0.95rem; margin-bottom:0;">This ensures 100% focus from key personnel.</p>
+                    <p style="margin-bottom:5px; font-weight:bold; color:var(--primary)">Why €500k?</p>
+                    <p style="font-size:0.95rem; margin-bottom:5px;">This secures top-tier Romanian engineering talent and ensures we can pay competitive market rates (including taxes) without compromising runway.</p>
                 </div>
             </div>
         </div>
@@ -528,7 +559,7 @@
     </div>
 
     <div class="controls">
-        <span class="page-num" id="pageNum">1 / 15</span>
+        <span class="page-num" id="pageNum">1 / 16</span>
         <button class="nav-btn" onclick="prevSlide()">❮</button>
         <button class="nav-btn" onclick="nextSlide()">❯</button>
     </div>
