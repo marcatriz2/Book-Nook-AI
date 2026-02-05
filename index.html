@@ -77,8 +77,7 @@
             border-left: 5px solid var(--primary); height: fit-content;
         }
 
-        /* --- PRODUCT WALKTHROUGH (REVAMPED) --- */
-        /* Changed to vertical cards to hold more text */
+        /* --- PRODUCT WALKTHROUGH (FEATURE CARDS) --- */
         .product-grid {
             display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px;
             margin-top: 20px; align-items: stretch; height: 100%;
@@ -100,11 +99,9 @@
         .feature-card:hover { transform: translateY(-5px); border-color: var(--primary); }
 
         .icon-box {
-            font-size: 4.5rem; /* Large but not overflowing */
-            margin-bottom: 15px;
+            font-size: 4.5rem; margin-bottom: 15px;
             filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
-            height: 90px; /* Fixed height for alignment */
-            display: flex; align-items: center; justify-content: center;
+            height: 90px; display: flex; align-items: center; justify-content: center;
         }
 
         .step-title { 
@@ -113,7 +110,6 @@
         
         .step-desc { 
             font-size: 1rem; color: #555; line-height: 1.5; 
-            /* Detailed text styling */
         }
 
         /* --- LIBBY HEADER --- */
@@ -156,6 +152,10 @@
         .nav-btn:hover { color: var(--primary); }
         .page-num { font-size: 1rem; color: #5f6368; font-family: 'Roboto'; font-weight: 500; }
         
+        /* Link styling in text */
+        a.slide-link { color: var(--primary); text-decoration: none; font-weight: 700; border-bottom: 2px solid transparent; transition: all 0.2s; }
+        a.slide-link:hover { border-bottom-color: var(--primary); }
+
         @media print { .controls { display: none !important; } }
         @media (max-width: 768px) { .two-col, .product-grid { grid-template-columns: 1fr; } }
     </style>
@@ -176,7 +176,7 @@
         </p>
         <div style="margin-top: 50px;">
             <span class="tag">Origins: Bucharest 🇷🇴</span>
-            <span class="tag" style="background: #e8f0fe; color: #1967d2;">Status: Live MVP</span>
+            <span class="tag" style="background: #e8f0fe; color: #1967d2;">Live: <a href="https://book-nook-ai.streamlit.app/" target="_blank" style="text-decoration:none; color:inherit;">book-nook-ai.streamlit.app</a></span>
         </div>
     </div>
 
@@ -202,20 +202,20 @@
     <div class="slide">
         <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
         <div style="margin-bottom: 5px;"><span class="tag">Part 1: The Utility</span></div>
-        <h2>Instant Digitization & Reader DNA</h2>
+        <h2>Archivist-Grade Digitization & Profiling</h2>
         <div class="two-col">
             <div>
-                <p>We start with a best-in-class utility that makes digitization effortless.</p>
+                <p>We start with a best-in-class utility that makes digitization effortless and accurate.</p>
                 <ul>
-                    <li><strong>Gemini Vision Engine:</strong> Ingests photos of messy shelves and digital exports instantly. No manual entry required.</li>
-                    <li><strong>Reader DNA:</strong> We don't just list books; we analyze them. The system generates a psychological profile (e.g., "The Stoic Entrepreneur") based on the user's collection.</li>
+                    <li><strong>Gemini Vision "Archivist Mode":</strong> We've tuned the AI (Temp 0.0) to scan spines with OCR-like precision, correcting blurry titles using its vast knowledge base.</li>
+                    <li><strong>Reader DNA:</strong> We don't just list books; we calculate traits (Fiction vs. Non-Fiction, Modern vs. Classic) to build a unique psychographic profile.</li>
                     <li><strong>Unified Dashboard:</strong> A single place for physical books, Kindle exports, and audiobooks.</li>
                 </ul>
             </div>
             <div class="highlight-box">
                 <h3>MVP Traction</h3>
-                <p>Users are already scanning shelves to uncover their reading archetype. It is inherently shareable content.</p>
-                <p style="color:var(--primary); margin-bottom: 0;"><strong>Live at: lib-ai.streamlit.app</strong></p>
+                <p>Users are already scanning shelves to uncover their "Archetype". The result is a shareable badge that drives viral growth.</p>
+                <p style="color:var(--primary); margin-bottom: 0;"><strong>Try it: <a href="https://book-nook-ai.streamlit.app/" class="slide-link">book-nook-ai.streamlit.app</a></strong></p>
             </div>
         </div>
     </div>
@@ -228,25 +228,25 @@
         <div class="product-grid">
             <div class="feature-card">
                 <div class="icon-box">📸</div>
-                <div class="step-title">1. Snap & Scan</div>
+                <div class="step-title">1. Precision Scan</div>
                 <div class="step-desc">
-                    The entry point is frictionless. Users simply take a photo of a bookshelf or upload a Kindle export. Our Gemini Vision engine instantly recognizes titles and authors, structuring chaotic data in seconds.
+                    Users snap a photo of a messy shelf. Our "Archivist Mode" AI identifies titles, authors, and genres instantly, ignoring non-book objects and correcting blurry text.
                 </div>
             </div>
 
             <div class="feature-card">
                 <div class="icon-box">🧬</div>
-                <div class="step-title">2. Decode DNA</div>
+                <div class="step-title">2. Reader DNA</div>
                 <div class="step-desc">
-                    We go beyond metadata. The AI analyzes themes, tone, and complexity to build a unique psychographic profile—the "Reader DNA"—which acts as the user's social signal to the network.
+                    The system generates a unique "Reader Badge" (PNG) with your Archetype and Traits. This creates an immediate "aha!" moment and a shareable social asset.
                 </div>
             </div>
 
             <div class="feature-card">
-                <div class="icon-box">📚</div>
-                <div class="step-title">3. Manage & Chat</div>
+                <div class="icon-box">🧠</div>
+                <div class="step-title">3. Persistent Chat</div>
                 <div class="step-desc">
-                    The library comes alive. Users can organize collections, export data, and interact with "Libby"—our AI librarian—to get contextual recommendations based on their confirmed history.
+                    Meet Libby. Unlike standard chatbots, she has long-term memory (via Supabase). She remembers your library and previous conversations even after you logout.
                 </div>
             </div>
         </div>
@@ -262,10 +262,10 @@
 
         <div class="two-col" style="grid-template-columns: 1.3fr 0.7fr;">
             <div>
-                <p><strong>Libby is not just a search bar. She is an AI companion with long-term memory.</strong></p>
+                <p><strong>Libby is not just a search bar. She is an AI companion with persistent memory.</strong></p>
                 <ul>
-                    <li><strong>Context Aware:</strong> Libby knows every book you own. If you ask about "resilience", she won't give a generic answer; she will reference <em>Antifragile</em> because she knows it's on your shelf.</li>
-                    <li><strong>Dynamic Updates:</strong> Every time you add a book or delete one, Libby's understanding of your taste evolves.</li>
+                    <li><strong>Context Aware:</strong> Libby knows every book you own. If you ask about "resilience", she references <em>Antifragile</em> because she knows it's on your shelf.</li>
+                    <li><strong>Long-Term Memory:</strong> We store chat logs in a structured SQL database. You can close the app, come back a week later, and continue the debate exactly where you left off.</li>
                     <li><strong>Conversational Search:</strong> Instead of keywords, you have a dialogue. "Libby, I'm feeling stuck. Which biography from my library should I re-read?"</li>
                 </ul>
             </div>
@@ -328,19 +328,19 @@
 
     <div class="slide">
         <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
-        <h2>GTM: Content-Led Growth</h2>
+        <h2>GTM: Viral Loops & Content</h2>
         <div class="two-col">
             <div>
-                <h3>1. The Utility "Trojan Horse" 🐎</h3>
-                <p>We launch as a free, single-player Utility. Users come for the "Reader DNA" analysis because it creates a highly shareable social artifact (like Spotify Wrapped), driving organic viral growth.</p>
+                <h3>1. The "Badge" Viral Loop 🏅</h3>
+                <p>Our app generates a beautiful, "Instagram-ready" badge summarizing your Reader DNA. Users share this to show off their intellectual identity (similar to Spotify Wrapped), driving organic sign-ups.</p>
                 
                 <h3>2. The Book Nook Podcast 🎙️</h3>
-                <p>We will produce a weekly YouTube Video Series (RO/EN). Deep-dive book discussions with local intellectuals and influencers. The app is used "In-Context" during the show to fact-check or explore themes.</p>
+                <p>We will produce a weekly YouTube Video Series (RO/EN). Deep-dive book discussions with local intellectuals and influencers. The app is used "In-Context" during the show.</p>
             </div>
             <div class="center-slide">
                 <div class="highlight-box" style="background:#e6f4ea">
-                    <p style="font-weight:bold; color:var(--primary); font-size:1.2rem;">Strategy: Own the Media</p>
-                    <p style="margin:0">We don't just buy ads. We create the cultural conversation around books.</p>
+                    <p style="font-weight:bold; color:var(--primary); font-size:1.2rem;">Strategy: Own the Conversation</p>
+                    <p style="margin:0">We don't just buy ads. We give users status symbols (badges) they <em>want</em> to share.</p>
                 </div>
             </div>
         </div>
@@ -352,9 +352,9 @@
         <p>Built for speed, scalability, and extremely low operational costs.</p>
         <div class="two-col">
             <ul>
-                <li><strong>🧠 The Brain: Google Gemini 1.5 Flash.</strong> We leverage the latest multimodal models for both vision (scanning) and reasoning (Libby). It is faster and cheaper than GPT-4o.</li>
-                <li><strong>⚡ The Backbone: Supabase.</strong> Providing enterprise-grade PostgreSQL, Vector Embeddings for semantic search, and Auth out of the box.</li>
-                <li><strong>💻 The Interface: Streamlit (Python).</strong> Allows for rapid iteration and deployment. We can push updates in minutes, not days.</li>
+                <li><strong>🧠 The Brain: Google Gemini 1.5 Flash.</strong> We leverage multimodal models with "Archivist Mode" (Temp 0.0) for precision scanning and "Creative Mode" for Libby.</li>
+                <li><strong>⚡ The Memory: Supabase (PostgreSQL).</strong> Handles Auth, Vector Embeddings for semantic search, and Persistent User Sessions (Chat History & Profiles).</li>
+                <li><strong>💻 The Interface: Streamlit.</strong> Allows for rapid iteration. We deploy updates in minutes.</li>
             </ul>
             <div class="center-slide">
                 <div class="highlight-box">
@@ -397,7 +397,7 @@
                 <h3>Unit Economics (Estimates)</h3>
                 <p>Based on a Freemium model (Free tier + Premium at €5/mo).</p>
                 <ul>
-                    <li><strong>CAC (Organic):</strong> €2.50 (driven by Podcast/Content)</li>
+                    <li><strong>CAC (Organic):</strong> €2.50 (driven by Badge Sharing/Content)</li>
                     <li><strong>LTV (2yr):</strong> €45.00</li>
                 </ul>
             </div>
@@ -442,7 +442,7 @@
         <p style="font-style: italic; font-size: 2rem; color: #5f6368;">"Book Nook AI connects your mind."</p>
         <div style="margin-top: 60px;">
             <p style="font-size: 1.2rem;"><strong>Contact:</strong> Bucharest, Romania</p>
-            <p><a href="https://lib-ai.streamlit.app" style="color:var(--primary); text-decoration: none; font-weight: bold; font-size: 1.3rem;">lib-ai.streamlit.app</a></p>
+            <p><a href="https://book-nook-ai.streamlit.app/" target="_blank" style="color:var(--primary); text-decoration: none; font-weight: bold; font-size: 1.3rem;">book-nook-ai.streamlit.app</a></p>
         </div>
     </div>
 
