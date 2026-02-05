@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Nook AI - Investor Deck v6.0</title>
+    <title>Book Nook AI - Investor Deck v6.1</title>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -161,6 +161,11 @@
         .alloc-bar-bg { width: 100%; background: #eee; height: 12px; border-radius: 6px; overflow: hidden; }
         .alloc-bar-fill { height: 100%; background: var(--primary); border-radius: 6px; }
         .alloc-desc { font-size: 0.95rem; color: #666; margin-top: 5px; }
+
+        /* --- CONTACT LINKS --- */
+        .contact-link { display: inline-flex; align-items: center; gap: 10px; color: #202124; text-decoration: none; margin: 5px 15px; font-weight: 500; transition: color 0.2s; }
+        .contact-link:hover { color: var(--primary); }
+        .contact-link img { width: 24px; height: 24px; }
 
         @media print { .controls { display: none !important; } }
         @media (max-width: 768px) { .two-col, .product-grid { grid-template-columns: 1fr; } }
@@ -502,15 +507,31 @@
     </div>
 
     <div class="slide center-slide">
-        <div class="logo-container" style="font-size: 3rem; margin-bottom: 30px;">
+        <div class="logo-container" style="font-size: 3rem; margin-bottom: 20px;">
             <span class="green-text">B</span>
             <div class="spectacles"><div class="lens" style="width:30px; height:30px;"></div><div class="bridge" style="width:10px;"></div><div class="lens" style="width:30px; height:30px;"></div></div>
             <span class="green-text">k</span><span style="margin-left: 15px;">Nook AI</span>
         </div>
-        <p style="font-style: italic; font-size: 2rem; color: #5f6368;">"Book Nook AI connects your mind."</p>
-        <div style="margin-top: 60px;">
-            <p style="font-size: 1.2rem;"><strong>Contact:</strong> Marius Cătălin Rizea</p>
-            <p><a href="https://book-nook-ai.streamlit.app/" target="_blank" style="color:var(--primary); text-decoration: none; font-weight: bold; font-size: 1.3rem;">book-nook-ai.streamlit.app</a></p>
+        <p style="font-style: italic; font-size: 2rem; color: #5f6368; margin-bottom: 40px;">"Book Nook AI connects your mind."</p>
+        
+        <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 10px;">Connect with us:</p>
+            
+            <a href="https://www.linkedin.com/company/book-nook-ai" target="_blank" class="contact-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                LinkedIn: Book Nook AI
+            </a>
+
+            <a href="https://www.linkedin.com/in/catalinrizea/" target="_blank" class="contact-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                Founder: Marius Cătălin Rizea
+            </a>
+
+            <div style="margin-top: 20px;">
+                <a href="https://book-nook-ai.streamlit.app/" target="_blank" style="color:var(--primary); text-decoration: none; font-weight: bold; font-size: 1.4rem;">
+                    book-nook-ai.streamlit.app
+                </a>
+            </div>
         </div>
     </div>
 
