@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Nook AI - Investor Deck</title>
+    <title>Book Nook AI - Investor Deck v5.1</title>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -156,17 +156,28 @@
         a.slide-link { color: var(--primary); text-decoration: none; font-weight: 700; border-bottom: 2px solid transparent; transition: all 0.2s; }
         a.slide-link:hover { border-bottom-color: var(--primary); }
 
-        /* FOUNDER SLIDE SPECIFIC */
+        /* FOUNDER SLIDE SPECIFIC - COMPACTING */
+        .founder-slide .two-col { 
+            align-items: flex-start; /* Align to top to save space */
+            gap: 40px;
+        }
         .founder-img-container {
-            width: 200px; height: 200px; border-radius: 50%; overflow: hidden; 
-            border: 6px solid var(--primary); margin-bottom: 20px; 
+            width: 180px; height: 180px; /* Slightly smaller image */
+            border-radius: 50%; overflow: hidden; 
+            border: 6px solid var(--primary); margin-bottom: 15px; 
             box-shadow: 0 10px 20px rgba(52, 168, 83, 0.2);
         }
+        .founder-slide h3 { margin-bottom: 5px; }
+        .founder-slide p { margin-bottom: 0.5rem; line-height: 1.4; } /* Tighter lines */
+        .founder-slide .highlight-box { padding: 15px 20px; margin-bottom: 15px; }
+        .founder-slide ul { margin-top: 15px; }
+        .founder-slide li { margin-bottom: 6px; font-size: 1rem; line-height: 1.3; } /* Compact list */
+
         .linkedin-btn {
             display: inline-flex; align-items: center; gap: 10px;
             background-color: #0077b5; color: white; text-decoration: none;
-            padding: 10px 20px; border-radius: 30px; font-weight: 600;
-            font-size: 1rem; margin-top: 15px; transition: all 0.2s;
+            padding: 8px 18px; border-radius: 30px; font-weight: 600;
+            font-size: 0.9rem; margin-top: 10px; transition: all 0.2s;
         }
         .linkedin-btn:hover { background-color: #005e93; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,119,181,0.3); }
 
@@ -380,36 +391,36 @@
         </div>
     </div>
 
-    <div class="slide">
+    <div class="slide founder-slide">
         <div class="logo-container"><span class="green-text">B</span>ook Nook AI</div>
         <h2>The Founder</h2>
-        <div class="two-col" style="align-items: center;">
-            <div class="center-slide">
+        <div class="two-col">
+            <div class="center-slide" style="justify-content: flex-start;">
                 <div class="founder-img-container">
-                    <img src="https://ui-avatars.com/api/?name=Marius+Catalin+Rizea&background=34a853&color=fff&size=256" alt="Marius Catalin Rizea" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./image_7.png" alt="Marius Catalin Rizea" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
                 </div>
-                <h3 style="margin-bottom: 5px; color: #202124; font-size: 1.8rem;">Marius Cătălin Rizea</h3>
-                <p style="color: #5f6368; font-weight: 500; font-size: 1.2rem;">Founder & Product Visionary</p>
+                <h3 style="color: #202124; font-size: 1.6rem;">Marius Cătălin Rizea</h3>
+                <p style="color: #5f6368; font-weight: 500; font-size: 1.1rem; margin-bottom: 10px;">Founder & Product Visionary</p>
                 
                 <a href="https://www.linkedin.com/in/catalinrizea/" target="_blank" class="linkedin-btn">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" height="20" style="filter: brightness(0) invert(1);"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="18" height="18" style="filter: brightness(0) invert(1);"> 
                     View LinkedIn Profile
                 </a>
             </div>
             <div>
-                <div class="highlight-box" style="background: white; border: 1px solid #eee; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                    <p style="font-size: 1.3rem; font-style: italic; color: #555; margin:0;">
+                <div class="highlight-box" style="background: white; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <p style="font-size: 1.2rem; font-style: italic; color: #555; margin:0; line-height: 1.3;">
                         "I am building the bridge between physical libraries and digital communities."
                     </p>
                 </div>
                 
-                <p><strong>The architect behind Book Nook AI.</strong></p>
-                <p>Marius combines technical expertise with a strong product intuition. He single-handedly architected and deployed the MVP, proving the ability to execute complex AI integrations rapidly and efficiently.</p>
+                <p style="margin-top: 15px;"><strong>The architect behind Book Nook AI.</strong></p>
+                <p>Marius combines technical expertise with strong product intuition. He single-handedly architected and deployed the MVP, proving the ability to execute complex AI integrations rapidly.</p>
                 
-                <ul style="margin-top: 25px;">
+                <ul>
                     <li><strong>🚀 Full-Stack Execution:</strong> Built the complete infrastructure (Streamlit, Python, Supabase) from scratch.</li>
-                    <li><strong>🧠 AI Strategy:</strong> Developed the "Archivist Mode" logic and the "Reader DNA" algorithm to drive engagement.</li>
-                    <li><strong>📈 Product Vision:</strong> Focused on creating high-retention features (Persistent Chat, Social Badges) to solve the "Lonely Reader Paradox".</li>
+                    <li><strong>🧠 AI Strategy:</strong> Developed the "Archivist Mode" logic and the "Reader DNA" algorithms.</li>
+                    <li><strong>📈 Product Vision:</strong> Focused on high-retention features to solve the "Lonely Reader Paradox".</li>
                 </ul>
             </div>
         </div>
